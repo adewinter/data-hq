@@ -162,6 +162,7 @@ TABS = [
     ('hqwebapp.views.dashboard', 'Dashboard'),
     ('xformmanager.views.dashboard', 'XForms'),
     ('receiver.views.show_submits', 'Submissions'),
+	('hqwebapp.views.formdesigner', 'OpenRosa FormDesigner'),
     # ('program.views.list_programs', 'Programs')
 ]
 
