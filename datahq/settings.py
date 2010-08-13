@@ -119,6 +119,10 @@ XFORMMANAGER_SCHEMA_PATH="data/schemas"
 XFORMMANAGER_EXPORT_PATH="data"
 XFORMMANAGER_FORM_TRANSLATE_JAR="lib/form_translate.jar"
 
+######### Logtracker settings #######
+LOGTRACKER_DEFAULT_ALERT_EMAIL="adewinter@dimagi.com"
+LOGTRACKER_LOG_THRESHOLD=30
+LOGTRACKER_ALERT_THRESHOLD=40
 
 ####### Domain settings  #######
 
