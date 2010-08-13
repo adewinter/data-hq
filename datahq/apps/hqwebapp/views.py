@@ -36,7 +36,6 @@ from domain.decorators import login_and_domain_required, domain_admin_required
 from program.models import Program
 from phone.models import PhoneUserInfo
 
-
 @login_and_domain_required
 def dashboard(request, template_name="hqwebapp/dashboard.html"):
     startdate, enddate = utils.get_dates(request, 7)
@@ -156,3 +155,12 @@ def logout(req, template_name="hqwebapp/loggedout.html"):
     '''Logout of rapidsms'''
     req.base_template = settings.BASE_TEMPLATE 
     return django_logout(req, **{"template_name" : template_name})
+
+@login_and_domain_required
+def formdesigner(request, template_name="openrosa/FormDesigner.html"):
+    return render_to_response(request,
+            template_name,
+            {},
+            context_instance=RequestContext(request)
+            )
+    
