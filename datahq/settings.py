@@ -106,9 +106,6 @@ INSTALLED_APPS = DEFAULT_APPS + HQ_APPS
 LOGIN_REDIRECT_URL='/'
 
 
-# CZUE:  these have been added as new custom properties to the settings
-# and are migrated from the previous rapidsms framework
-
 ####### Receiver Settings #######
 RECEIVER_SUBMISSION_PATH="data/submissions"
 RECEIVER_ATTACHMENT_PATH="data/attachments"
@@ -118,11 +115,6 @@ RECEIVER_EXPORT_PATH="data"
 XFORMMANAGER_SCHEMA_PATH="data/schemas"
 XFORMMANAGER_EXPORT_PATH="data"
 XFORMMANAGER_FORM_TRANSLATE_JAR="lib/form_translate.jar"
-
-######### Logtracker settings #######
-LOGTRACKER_DEFAULT_ALERT_EMAIL="adewinter@dimagi.com"
-LOGTRACKER_LOG_THRESHOLD=30
-LOGTRACKER_ALERT_THRESHOLD=40
 
 ####### Domain settings  #######
 
