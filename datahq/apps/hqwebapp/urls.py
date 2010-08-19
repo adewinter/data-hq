@@ -5,6 +5,7 @@ urlpatterns = patterns('',
     url(r'^$',       'hqwebapp.views.dashboard', name="homepage"),    
     (r'^serverup.txt$', 'hqwebapp.views.server_up'),
     (r'^change_password/?$', 'hqwebapp.views.password_change'),
+    (r'^formdesigner/?$', 'hqwebapp.views.formdesigner'),
     
     (r'^no_permissions/?$', 'hqwebapp.views.no_permissions'),
     

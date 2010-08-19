@@ -1,3 +1,7 @@
 *.pyc
 datahq/localsettings.py
 datahq/data/*
+datahq/apps/hqwebapp/static/WEB-INF/*
+datahq/apps/hqwebapp/static/formdesigner/*
+datahq/apps/hqwebapp/static/gxt/*
+datahq/apps/hqwebapp/static/FormDesigner.css

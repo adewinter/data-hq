@@ -363,10 +363,10 @@ def form_list(request, domain_name):
         return HttpResponseNotFound("Domain Not Found")
 
     forms = FormDefModel.objects.all().filter(domain=domain_id)
-    
+
     xml = "<forms>\n"
     for form in forms:
-         xml += '\t<form url="http://%s/xforms/%s/form.xhtml">%s Version %s</form>\n' % (url_base, form.id, form.form_display_name, form.version)
+        xml += '\t<form url="http://%s/xforms/%s/form.xhtml">%s Version %s</form>\n' % (url_base, form.id, form.form_display_name, form.version)
     xml += "</forms>"
     
     return HttpResponse(xml, mimetype="text/xml")

@@ -36,7 +36,6 @@ from domain.decorators import login_and_domain_required, domain_admin_required
 from program.models import Program
 from phone.models import PhoneUserInfo
 
-
 @login_and_domain_required
 def dashboard(request, template_name="hqwebapp/dashboard.html"):
     startdate, enddate = utils.get_dates(request, 7)
@@ -145,7 +144,6 @@ def no_permissions(request):
     return render_to_response(request, template_name, {})
 
 def login(req, template_name="login_and_password/login.html"):
-    '''Login to rapidsms'''
     # this view, and the one below, is overridden because 
     # we need to set the base template to use somewhere  
     # somewhere that the login page can access it.
@@ -153,6 +151,14 @@ def login(req, template_name="login_and_password/login.html"):
     return django_login(req, **{"template_name" : template_name})
 
 def logout(req, template_name="hqwebapp/loggedout.html"):
-    '''Logout of rapidsms'''
     req.base_template = settings.BASE_TEMPLATE 
     return django_logout(req, **{"template_name" : template_name})
+
+@login_and_domain_required
+def formdesigner(request, template_name="openrosa/FormDesigner.html"):
+    return render_to_response(request,
+            template_name,
+            {},
+            context_instance=RequestContext(request)
+            )
+    
