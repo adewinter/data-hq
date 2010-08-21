@@ -1,1 +1,7 @@
 localsettings.*
+apps/hqwebapp/static/WEB_INF
+apps/hqwebapp/static/formdesigner
+apps/hqwebapp/static/gxt
+apps/xformmanager/views.py.bak
+apps/hqwebapp/static/FormDesigner.css
+
