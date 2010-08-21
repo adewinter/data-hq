@@ -23,6 +23,7 @@ from xformmanager.models import FormDataGroup, FormDataPointer, FormDataColumn, 
 from xformmanager.templatetags.xform_tags import NOT_SET
 from xformmanager.util import get_unique_value
 from xformmanager.xformdef import FormDef
+from datetime import datetime
 import hashlib
 import logging
 import sys
@@ -730,7 +731,7 @@ def export_csv(request, formdef_id):
             current = ElementDefModel.objects.filter(parent__in=current)
     
     
-        return get_zipfile([(temp.name, filename) for (temp, filename) in tempfiles], "%s.zip" % xsd.form_name)
+        return get_zipfile([(temp.name, filename) for (temp, filename) in tempfiles], "%s-%s.zip" % (xsd.form_name,str(datetime.now().date())))
     else:
         return format_csv(root.get_rows(), root.get_column_names(), xsd.form_name)
 
